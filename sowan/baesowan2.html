@@ -207,9 +207,79 @@
         </div>
     </footer>
     <script>
+        // Dark mode preference
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
         }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('button span.material-icons');
+        const navMenu = document.querySelector('nav .hidden.md\\:flex');
+
+        if (menuBtn) {
+            menuBtn.parentElement.addEventListener('click', () => {
+                const mobileNav = document.createElement('div');
+                mobileNav.className = 'fixed inset-0 bg-white dark:bg-black z-40 flex flex-col items-center justify-center space-y-8 md:hidden';
+                mobileNav.innerHTML = `
+                    <button class="absolute top-6 right-6 text-2xl"><span class="material-icons">close</span></button>
+                    ${document.querySelector('nav .hidden.md\\:flex').innerHTML}
+                `;
+                document.body.appendChild(mobileNav);
+                document.body.style.overflow = 'hidden';
+
+                mobileNav.querySelector('button').addEventListener('click', () => {
+                    mobileNav.remove();
+                    document.body.style.overflow = '';
+                });
+
+                mobileNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.remove();
+                        document.body.style.overflow = '';
+                    });
+                });
+            });
+        }
+
+        // Scroll Reveal Animation (Simple fade-in on scroll)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 
