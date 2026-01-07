@@ -147,16 +147,36 @@
         </div>
     </header>
     <section class="py-20 bg-white dark:bg-background-dark" id="biography">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2
-                class="font-display text-4xl md:text-5xl text-gray-200 dark:text-gray-700 font-bold uppercase tracking-widest mb-8 select-none">
-                이야기</h2>
-            <h3 class="font-display text-3xl md:text-4xl text-gray-900 dark:text-white mb-8">배소완의 진심이 무대의 언어가 됩니다.</h3>
-            <p class="prose prose-lg mx-auto text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6">
-                안녕하세요, 배우 배소완입니다. 저는 연극이라는 매체를 통해 '좋은 사람들'을 만나고 싶습니다. 무대 위에서 관객과 눈을 맞추는 배우로, 회현동소극장의 구석구석을 살피는 실장으로 당신에게
-                위로가 되는 공간을 만들고 싶습니다. 우리가 만나 함께 웃고 울며 나누는 시간이 삶의 작은 치유가 되기를 바랍니다. 배소완이 지키는 이 따뜻한 공간에 당신을 초대합니다.
-            </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Acting with Heart, Managing with Care by So Wan</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Video Section -->
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl bg-black max-w-sm mx-auto md:max-w-none w-full aspect-[9/16]">
+                    <video class="w-full h-full object-cover" controls playsinline poster="20260108_001813.png">
+                        <source src="IMG_1607.MOV" type="video/quicktime">
+                        <source src="IMG_1607.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Text Section -->
+                <div class="text-left">
+                    <h2
+                        class="font-display text-4xl md:text-5xl text-gray-200 dark:text-gray-700 font-bold uppercase tracking-widest mb-6 select-none text-left">
+                        이야기</h2>
+                    <h3 class="font-display text-3xl md:text-4xl text-gray-900 dark:text-white mb-6 leading-tight">배소완의
+                        진심이<br />무대의 언어가 됩니다.</h3>
+                    <div
+                        class="prose prose-lg text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-8 space-y-4">
+                        <p>안녕하세요, 배우 배소완입니다.</p>
+                        <p>저는 연극이라는 매체를 통해 '좋은 사람들'을 만나고 싶습니다. 무대 위에서 관객과 눈을 맞추는 배우로, 회현동소극장의 구석구석을 살피는 실장으로 당신에게 위로가 되는
+                            공간을 만들고 싶습니다.</p>
+                        <p>우리가 만나 함께 웃고 울며 나누는 시간이 삶의 작은 치유가 되기를 바랍니다. 배소완이 지키는 이 따뜻한 공간에 당신을 초대합니다.</p>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 italic">Acting with Heart, Managing with Care by
+                        So Wan</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="py-20 bg-gray-50 dark:bg-[#1f1f1f]" id="productions">
@@ -169,24 +189,47 @@
                     만들어갑니다.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 회현동소극장 -->
                 <div
                     class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
-                    <img alt="회현동소극장" class="w-full h-48 object-cover mb-4" src="sowan.png" />
+                    <div class="aspect-[4/3] overflow-hidden rounded mb-4 bg-gray-200">
+                        <img alt="회현동소극장"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="IMG_5336.jpg" />
+                    </div>
                     <h3 class="font-display text-lg font-bold text-gray-900 dark:text-white mb-2">회현동소극장</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400">배소완 실장이 지키는 따뜻한 아지트</p>
                 </div>
+                <!-- (주)회현동극장 -->
                 <div
                     class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="aspect-[4/3] overflow-hidden rounded mb-4 bg-gray-200">
+                        <img alt="(주)회현동극장"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="IMG_3578.jpg" />
+                    </div>
                     <h3 class="font-display text-lg font-bold text-gray-900 dark:text-white mb-2">(주)회현동극장</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400">예술의 뿌리를 단단하게 내리는 곳</p>
                 </div>
+                <!-- 말그미극단 -->
                 <div
                     class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="aspect-[4/3] overflow-hidden rounded mb-4 bg-gray-200">
+                        <img alt="말그미극단"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="IMG_1610.jpg" />
+                    </div>
                     <h3 class="font-display text-lg font-bold text-gray-900 dark:text-white mb-2">말그미극단</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400">맑고 선한 웃음이 가득한 공연들</p>
                 </div>
+                <!-- 극단해연 -->
                 <div
                     class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+                    <div class="aspect-[4/3] overflow-hidden rounded mb-4 bg-gray-200">
+                        <img alt="극단해연"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="20170407.jpg" />
+                    </div>
                     <h3 class="font-display text-lg font-bold text-gray-900 dark:text-white mb-2">극단해연</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400">바다처럼 깊은 감동의 파도를 만드는 팀</p>
                 </div>
