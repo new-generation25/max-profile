@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEE KWON - Cultural Strategist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .heading-main {
+            font-weight: 900;
+            font-size: clamp(2rem, 8vw, 6rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .heading-section {
+            font-weight: 800;
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .text-body {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .text-small {
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="smooth-scroll">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="img_link/portfolio_01.png" alt="Cultural Event" class="w-full h-full object-cover opacity-60" />
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <p class="text-small text-gray-300 mb-6 fade-in">Cultural Strategist & Planner</p>
+            <h1 class="heading-main text-white mb-6 fade-in" style="animation-delay: 0.2s">
+                우리는 문화로 연결된<br>하나의 공동체입니다
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto fade-in" style="animation-delay: 0.4s">
+                Creating meaningful connections through<br>local culture and strategic planning
+            </p>
+        </div>
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-3 bg-white/70 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div class="space-y-8">
+                    <p class="text-small text-gray-400">01 / About</p>
+                    <h2 class="heading-section text-black">
+                        We serve connecting<br>
+                        people through culture
+                    </h2>
+                    <div class="space-y-6 text-body">
+                        <p>
+                            텍스트 너머의 문화를 읽어내고, 지역의 숨겨진 가치를 시민의 일상으로 연결하는 과정에 매료되어 기획을 시작했습니다.
+                        </p>
+                        <p>
+                            시민과 호흡하는 매 순간이 저에게는 가장 소중한 배움의 장입니다. 바닥에서 시작하는 로컬 브랜딩을 통해 외부에서 이식된 문화가 아닌,
+                            지역의 정체성을 바탕으로 자생하는 문화를 기획합니다.
+                        </p>
+                    </div>
+                    <div class="pt-6 space-y-3">
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="font-bold text-black w-24">Name</span>
+                            <span class="text-gray-600">이 권 (Lee Kwon)</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="font-bold text-black w-24">Birth</span>
+                            <span class="text-gray-600">1976</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="font-bold text-black w-24">Region</span>
+                            <span class="text-gray-600">Gimhae, Korea</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="font-bold text-black w-24">Email</span>
+                            <span class="text-gray-600">socialceos@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="img_link/portfolio_02.png" alt="Cultural Workspace"
+                        class="w-full h-[600px] object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Grid Section -->
+    <section class="py-32 px-6 md:px-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <p class="text-small text-gray-400 mb-4">02 / Portfolio</p>
+                <h2 class="heading-section text-black mb-6">
+                    Selected Works
+                </h2>
+                <p class="text-body max-w-2xl">
+                    지역문화 콘텐츠 기획, 뮤지컬 교육, 관광 활성화(DMO) 분야에서 다양한 프로젝트를 진행해왔습니다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Work Card 1 -->
+                <div class="hover-lift bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="image-container h-64">
+                        <img src="img_link/portfolio_03.png" alt="Cultural Center Project"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <p class="text-small text-gray-400">Cultural Infrastructure</p>
+                        <h3 class="text-2xl font-bold text-black">김해 문화센터 기획</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            지역 문화 거점 공간 설계 및 운영 컨설팅
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Work Card 2 -->
+                <div class="hover-lift bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="image-container h-64">
+                        <img src="img_link/portfolio_04.png" alt="Performance Planning"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <p class="text-small text-gray-400">Performance & Education</p>
+                        <h3 class="text-2xl font-bold text-black">뮤지컬 교육 프로그램</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            지역 청소년을 위한 문화예술 교육 커리큘럼 개발
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Work Card 3 -->
+                <div class="hover-lift bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="image-container h-64">
+                        <img src="img_link/portfolio_05.png" alt="Team Collaboration"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <p class="text-small text-gray-400">Community Building</p>
+                        <h3 class="text-2xl font-bold text-black">기획자 네트워크 구축</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            지역 내 문화예술 활동가 커뮤니티 형성 및 협업 기획
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <p class="text-small text-gray-400 mb-4">03 / Career</p>
+                    <h2 class="heading-section text-black mb-6">Progress &<br>Experience</h2>
+                </div>
+                <div class="md:col-span-8 space-y-12">
+                    <!-- Career Timeline -->
+                    <div class="space-y-8 border-l-2 border-gray-200 pl-8">
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-0 w-4 h-4 bg-black rounded-full"></div>
+                            <p class="text-small text-gray-400 mb-2">2023 - Present</p>
+                            <h3 class="text-2xl font-bold text-black mb-2">김해DMO사업단 총괄PM</h3>
+                            <p class="text-gray-600">봉황대협동조합</p>
+                            <p class="text-sm text-gray-500 mt-4">
+                                김해시의 관광 브랜딩 및 DMO(Destination Marketing Organization) 전략 수립,
+                                지역 관광 콘텐츠 개발 및 마케팅 총괄
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-0 w-4 h-4 bg-gray-300 rounded-full"></div>
+                            <p class="text-small text-gray-400 mb-2">2022 - 2023</p>
+                            <h3 class="text-2xl font-bold text-black mb-2">사무국장 (기획 총괄)</h3>
+                            <p class="text-gray-600">(주)회현동극장</p>
+                            <p class="text-sm text-gray-500 mt-4">
+                                극장 운영 및 공연 프로그램 기획, 지역 문화예술 활성화 프로젝트 진행
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-0 w-4 h-4 bg-gray-300 rounded-full"></div>
+                            <p class="text-small text-gray-400 mb-2">2015 - 2022</p>
+                            <h3 class="text-2xl font-bold text-black mb-2">이사 (경영 및 기획 총괄)</h3>
+                            <p class="text-gray-600">문아트컴퍼니(주)</p>
+                            <p class="text-sm text-gray-500 mt-4">
+                                문화예술 기획사 경영 총괄, 공연·전시·교육 프로그램 기획 및 운영
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Awards & Training -->
+                    <div class="grid md:grid-cols-2 gap-8 pt-8">
+                        <div class="bg-gray-50 p-8 rounded-xl">
+                            <p class="text-small text-gray-400 mb-3">Award</p>
+                            <h4 class="text-xl font-bold text-black mb-2">김해시장 표창장</h4>
+                            <p class="text-sm text-gray-600">2020.12 지역사회발전 공헌</p>
+                        </div>
+                        <div class="bg-gray-50 p-8 rounded-xl">
+                            <p class="text-small text-gray-400 mb-3">Training</p>
+                            <h4 class="text-xl font-bold text-black mb-2">지역문화전문인력 양성</h4>
+                            <p class="text-sm text-gray-600">경남문화예술진흥원 3기 수료</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-32 px-6 md:px-12 bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <p class="text-small text-gray-400 mb-4">04 / Vision</p>
+                <h2 class="heading-section text-white mb-6">
+                    What I Aspire To Do
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-6">
+                    <div class="text-6xl font-black text-white/20">01</div>
+                    <h3 class="text-2xl font-bold">기획자 및 예술가<br>네트워크 구축</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        지역 내 다양한 활동가들이 고립되지 않고 서로를 키워주는 커뮤니티를 만듭니다.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="text-6xl font-black text-white/20">02</div>
+                    <h3 class="text-2xl font-bold">실천적 학습<br>프로그램 기획</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        이론에 그치지 않고 현장의 고민을 함께 나누며 성장하는 공부의 장을 지속적으로 마련합니다.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="text-6xl font-black text-white/20">03</div>
+                    <h3 class="text-2xl font-bold">바닥에서 시작하는<br>로컬 브랜딩</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        외부에서 이식된 문화가 아닌, 지역의 정체성을 바탕으로 자생하는 문화를 기획합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-32 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <p class="text-small text-gray-400 mb-4">05 / Moments</p>
+                <h2 class="heading-section text-black mb-6">
+                    Behind The Scenes
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="img_link/portfolio_01.png" alt="Gallery 1" class="w-full h-full object-cover" />
+                </div>
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="img_link/portfolio_02.png" alt="Gallery 2" class="w-full h-full object-cover" />
+                </div>
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="img_link/portfolio_03.png" alt="Gallery 3" class="w-full h-full object-cover" />
+                </div>
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="img_link/portfolio_04.png" alt="Gallery 4" class="w-full h-full object-cover" />
+                </div>
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg md:col-span-2">
+                    <img src="img_link/portfolio_05.png" alt="Gallery 5" class="w-full h-full object-cover" />
+                </div>
+                <div class="image-container aspect-square rounded-lg overflow-hidden shadow-lg md:col-span-2">
+                    <img src="img_link/portfolio_06.png" alt="Gallery 6" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-32 px-6 md:px-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-small text-gray-400 mb-8">Get In Touch</p>
+            <h2 class="heading-main text-black mb-12">
+                Let's Create<br>Something Together
+            </h2>
+            <a href="mailto:socialceos@gmail.com"
+                class="inline-block bg-black text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors">
+                Contact Me
+            </a>
+            <div class="mt-16 space-y-4 text-gray-600">
+                <p class="text-lg font-medium">socialceos@gmail.com</p>
+                <p>경남 김해시 분성로 259</p>
+                <div class="flex justify-center gap-6 pt-6">
+                    <a href="https://www.facebook.com/gwon2" target="_blank"
+                        class="text-sm font-medium hover:text-black transition-colors">Facebook</a>
+                    <a href="https://www.instagram.com/socialceo4/" target="_blank"
+                        class="text-sm font-medium hover:text-black transition-colors">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-xs text-gray-400 uppercase tracking-wider">© 2025 Lee Kwon. All Rights Reserved.</p>
+            <p class="text-xs text-gray-400 uppercase tracking-wider">Built with Passion for Culture</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
